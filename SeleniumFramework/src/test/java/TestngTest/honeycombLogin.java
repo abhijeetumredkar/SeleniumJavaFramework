@@ -6,6 +6,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
@@ -32,8 +33,10 @@ public class honeycombLogin {
 	public void setupTest() throws Exception {
 
 		logger = LogManager.getLogger(honeycombLogin.class);
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("headless");
 		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
+		driver = new ChromeDriver(options);
 		newlogin = new newHoneycombLogin(driver);
 		newadminlogin = new newAdminLogin(driver);
 		propertileFile.getProperty();
