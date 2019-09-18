@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 
 public class adminLogin {
 
-	static WebElement element=null;
+	static WebElement element = null;
 
 	public static WebElement clickYes(WebDriver driver) {
 

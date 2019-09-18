@@ -16,7 +16,7 @@ public class excelutility {
 		try {
 
 			workbook = new XSSFWorkbook(workbookName);
-			sheet= workbook.getSheet(sheetname);
+			sheet = workbook.getSheet(sheetname);
 
 		} catch (Exception e) {
 
@@ -24,32 +24,26 @@ public class excelutility {
 
 		}
 
-
 	}
 
-	public static int getrowCount() throws IOException{
+	public static int getrowCount() throws IOException {
 
 		int rowCount = sheet.getPhysicalNumberOfRows();
 		return rowCount;
 
-
 	}
-	
-	public static int getcolumnCount() throws IOException{
+
+	public static int getcolumnCount() throws IOException {
 
 		int coulumnCount = sheet.getRow(0).getPhysicalNumberOfCells();
 		return coulumnCount;
-
 
 	}
 
 	public static String getcellString(int rowNum, int cellNum) {
 
-
-
-		String cellstringValue= sheet.getRow(rowNum).getCell(cellNum).getStringCellValue();
+		String cellstringValue = sheet.getRow(rowNum).getCell(cellNum).getStringCellValue();
 		return cellstringValue;
-
 
 	}
 
@@ -60,5 +54,3 @@ public class excelutility {
 
 	}
 }
-
-

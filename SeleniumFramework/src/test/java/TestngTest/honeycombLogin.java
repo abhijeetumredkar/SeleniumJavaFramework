@@ -22,16 +22,16 @@ public class honeycombLogin {
 	static WebDriver driver;
 	static newHoneycombLogin newlogin;
 	static newAdminLogin newadminlogin;
-	public Logger logger; 
+	public Logger logger;
 	public static String url = null;
 	propertileFile propfile = new propertileFile();
-	
+
 	String projectPath;
-	
+
 	@BeforeTest
 	public void setupTest() throws Exception {
 
-		logger= LogManager.getLogger(honeycombLogin.class);
+		logger = LogManager.getLogger(honeycombLogin.class);
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		newlogin = new newHoneycombLogin(driver);
@@ -40,18 +40,18 @@ public class honeycombLogin {
 		projectPath = System.getProperty("user.dir");
 		logger.info("Setup done successfully");
 	}
-	
+
 	@DataProvider(name = "honeycomblogin")
 	public Object[][] dataSetup() throws Exception {
-		
+
 		ExcelDataProvider data = new ExcelDataProvider();
-		Object excelldata [][] = data.testData(projectPath+"/Excel/data.xlsx", "Sheet1");
-		return excelldata; 
+		Object excelldata[][] = data.testData(projectPath + "/Excel/data.xlsx", "Sheet1");
+		return excelldata;
 	}
-	
+
 	@Test(dataProvider = "honeycomblogin")
 	public void login(String username, String password) {
-		
+
 		driver.get(url);
 		newlogin.setUsername(username);
 		newlogin.setPassword(password);

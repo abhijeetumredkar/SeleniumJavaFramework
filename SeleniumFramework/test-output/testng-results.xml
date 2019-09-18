@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="11062" started-at="2019-09-18T11:02:57 IST" finished-at="2019-09-18T11:03:08 IST">
+  <suite name="Suite" duration-ms="10770" started-at="2019-09-18T15:51:43 IST" finished-at="2019-09-18T15:51:53 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="11062" started-at="2019-09-18T11:02:57 IST" finished-at="2019-09-18T11:03:08 IST">
+    <test name="Test" duration-ms="10770" started-at="2019-09-18T15:51:43 IST" finished-at="2019-09-18T15:51:53 IST">
       <class name="TestngTest.honeycombLogin">
-        <test-method status="PASS" signature="setupTest()[pri:0, instance:TestngTest.honeycombLogin@7494e528]" name="setupTest" is-config="true" duration-ms="2824" started-at="2019-09-18T11:02:57 IST" finished-at="2019-09-18T11:03:00 IST">
+        <test-method status="PASS" signature="setupTest()[pri:0, instance:TestngTest.honeycombLogin@7494e528]" name="setupTest" is-config="true" duration-ms="2866" started-at="2019-09-18T15:51:43 IST" finished-at="2019-09-18T15:51:46 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupTest -->
-        <test-method status="PASS" signature="login(java.lang.String, java.lang.String)[pri:0, instance:TestngTest.honeycombLogin@7494e528]" name="login" duration-ms="5642" started-at="2019-09-18T11:03:00 IST" data-provider="honeycomblogin" finished-at="2019-09-18T11:03:05 IST">
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String)[pri:0, instance:TestngTest.honeycombLogin@7494e528]" name="login" duration-ms="5301" started-at="2019-09-18T15:51:46 IST" data-provider="honeycomblogin" finished-at="2019-09-18T15:51:51 IST">
           <params>
             <param index="0">
               <value>
@@ -27,11 +27,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:TestngTest.honeycombLogin@7494e528]" name="teardown" is-config="true" duration-ms="2320" started-at="2019-09-18T11:03:05 IST" finished-at="2019-09-18T11:03:08 IST">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:TestngTest.honeycombLogin@7494e528]" name="teardown" is-config="true" duration-ms="2321" started-at="2019-09-18T15:51:51 IST" finished-at="2019-09-18T15:51:53 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- TestngTest.honeycombLogin -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

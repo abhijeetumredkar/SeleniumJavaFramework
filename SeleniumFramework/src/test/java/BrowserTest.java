@@ -16,14 +16,14 @@ public class BrowserTest {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
-		String driverPath= System.getProperty("user.dir");
-		System.setProperty("webdriver.chrome.driver", driverPath+"/Drivers/ChromeDriver/chromedriver.exe");
-		
-	//	WebDriver driver = new FirefoxDriver();
+
+		String driverPath = System.getProperty("user.dir");
+		System.setProperty("webdriver.chrome.driver", driverPath + "/Drivers/ChromeDriver/chromedriver.exe");
+
+		// WebDriver driver = new FirefoxDriver();
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://google.com");
-	
+
 	}
 
 }
