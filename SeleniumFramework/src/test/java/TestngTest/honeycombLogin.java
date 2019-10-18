@@ -1,9 +1,13 @@
 package TestngTest;
 
+import java.io.File;
 import java.io.IOException;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -33,10 +37,10 @@ public class honeycombLogin {
 	public void setupTest() throws Exception {
 
 		logger = LogManager.getLogger(honeycombLogin.class);
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments("headless");
+	//	ChromeOptions options = new ChromeOptions();
+	//	options.addArguments("headless");
 		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver(options);
+		driver = new ChromeDriver();
 		newlogin = new newHoneycombLogin(driver);
 		newadminlogin = new newAdminLogin(driver);
 		propertileFile.getProperty();
@@ -61,6 +65,13 @@ public class honeycombLogin {
 		newlogin.signIn();
 		newadminlogin.clickyes();
 		logger.info("Login successful into Honeycomb");
+	}
+	@Test
+	public void takeScreenshot() throws Exception{
+		
+		File screenshotFile= ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(screenshotFile, new File (projectPath+"/src/test/resources/Screenshot/Image.png"));
+		logger.info("Screenshot Captured");
 	}
 
 	@AfterTest
